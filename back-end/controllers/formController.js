@@ -1,5 +1,6 @@
 const Form = require('../models/formModel');
 
+// Create forms data api
 exports.createForm = async (req, res) => {
   try {
     const { type, units, value, date, dataType, validations } = req.body;
@@ -20,6 +21,7 @@ exports.createForm = async (req, res) => {
   }
 };
 
+// Update forms data api
 exports.updateForm = async (req, res) => {
   try {
     const { id } = req.params;
@@ -47,6 +49,7 @@ exports.updateForm = async (req, res) => {
   }
 };
 
+// Pagination api
 const paginate = async (query, page, limit) => {
   const skip = (page - 1) * limit;
   const totalEntries = await Form.countDocuments(query);
@@ -63,6 +66,7 @@ const paginate = async (query, page, limit) => {
   };
 };
 
+// Today's forms data api
 exports.getTodaysForms = async (req, res) => {
   try {
     const today = new Date();
@@ -84,6 +88,7 @@ exports.getTodaysForms = async (req, res) => {
   }
 };
 
+// Pending forms data api
 exports.getPendingForms = async (req, res) => {
   try {
     const { page = 1, limit = 7 } = req.query;
@@ -100,6 +105,7 @@ exports.getPendingForms = async (req, res) => {
   }
 };
 
+// Saved forms data api
 exports.getSavedForms = async (req, res) => {
   try {
     const { page = 1, limit = 7 } = req.query;
@@ -112,6 +118,17 @@ exports.getSavedForms = async (req, res) => {
     res.status(200).json(paginationResult);
   } catch (error) {
     console.error('Error fetching saved entries:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+// Delete all forms data api
+exports.deleteAllForms = async (req, res) => {
+  try {
+    await Form.deleteMany({});
+    res.status(200).json({ message: 'All forms deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting all forms:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
 };
