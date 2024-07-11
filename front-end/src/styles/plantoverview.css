@@ -1,0 +1,234 @@
+.comman-box {
+    border-radius: 16px;
+    background: #FFFFFF;
+    border: 1px solid #DFE6FA
+}
+
+.divdie-line-horizontal {
+    border-radius: 40px;
+    height: 100%;
+    opacity: 0.1;
+    rotate: 180deg;
+    border: 2px solid #000000;
+    display: block;
+}
+
+.table-header-title {
+    font-size: 35.09px;
+    font-weight: 400;
+    line-height: 45.69px;
+    letter-spacing: -0.05em;
+    color: var(--secondary-color);
+}
+
+.table-filter-title {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* ------second-common-scroll-style------- */
+.table-scroll::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+}
+
+/* Track */
+.table-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.table-scroll::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.table-scroll::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ------plant-overview-table------ */
+.plant-overview-container {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.plant-overview-container table {
+    border-collapse: collapse;
+}
+
+.plant-overview-container table thead {
+    /* display: table-caption; */
+    /* padding: 5px; */
+    height: 45px;
+}
+
+.plant-overview-table table thead th {
+    /* width: 25%; */
+    /* padding: 5px; */
+    border-right: 2px solid hsla(0, 0%, 0%, 0.1);
+}
+
+/* .plant-overview-table table tbody th {
+    width: auto;
+} */
+
+.plant-overview-table th:last-child {
+    border: none;
+}
+
+.plant-overview-table td {
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid hsla(0, 0%, 0%, 0.1);
+}
+
+.plant-overview-table .active-input {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.04px;
+    color: var(--secondary-color);
+    padding: 5px;
+    border: 1px solid #BBBBBB;
+    background: #F2F2F2;
+    border-radius: 8px;
+    outline: none;
+    /* width: 100%; */
+    box-sizing: border-box;
+}
+
+.plant-overview-table .deactive-input {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.04px;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 5px;
+    border: none;
+    background: #ffffff;
+    outline: none;
+    /* width: 100%; */
+    box-sizing: border-box;
+}
+
+.plant-overview-table .deactive-input::placeholder {
+    color: transparent;
+}
+
+.plant-overview-table button.operation-btn {
+    padding: 8px 16px;
+    width: 100%;
+    background-color: var(--bg-dark-navy-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.plant-overview-table button.disable {
+    padding: 8px 16px;
+    width: 100%;
+    color: #0D1631;
+    border-radius: 4px;
+    background-color: #B4BEDE;
+    border: 1px solid #4C68C7;
+    cursor: auto;
+}
+
+.plant-overview-table button.operation-btn:focus-visible {
+    outline: none;
+}
+
+.plant-overview-table button.operation-btn:focus {
+    outline: none;
+}
+
+.plant-overview-table button.operation-btn:hover {
+    transition: 0.5s;
+    opacity: 0.9;
+    background-color: #363d54;
+}
+
+.palnts-btn {
+    height: 40px;
+    background-color: var(--bg-dark-navy-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.palnts-btn:focus-visible,
+.palnts-btn:focus {
+    outline: none;
+}
+
+.palnts-btn:hover {
+    transition: 0.5s;
+    opacity: 0.9;
+    background-color: #363d54;
+}
+
+/* -----pagination-btn-------- */
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.pagination button {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.83px;
+    letter-spacing: -0.05em;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    border: 1px solid #DFE6FA;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    transition: 0.5s;
+    background-color: #363d54;
+    color: #FFFFFF;
+}
+
+.pagination button.active {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.83px;
+    letter-spacing: -0.05em;
+    outline: none;
+    transition: 0.5s;
+    opacity: 0.9;
+    background-color: #363d54;
+    color: #FFFFFF;
+}
+
+.pagination button:focus {
+    outline: none;
+}
+
+
+/* ------error----- */
+.error-message {
+    display: block;
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
